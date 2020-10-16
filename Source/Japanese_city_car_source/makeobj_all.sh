@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Deleting existing pak file..."
-for file in `find ../pak128_Ex_Kyusyu -name '*.pak'`; do
+for file in `find ../Japanese_city_car -name '*.pak'`; do
 		rm $file
 done
 echo "done. Packing from dat file..."
@@ -15,7 +15,7 @@ for file in `find . -name '*.dat'`; do
     fi
     pakname=`echo $file | sed -e "s/dat/pak/g"`
     pakname=`basename $pakname`
-    pakname="../pak128_Ex_Kyusyu/$pakname"
+    pakname="../Japanese_city_car/$pakname"
     echo "searching $file"
     echo "packing using $pakoption"
     echo "packed in $pakname"
